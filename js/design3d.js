@@ -4,6 +4,7 @@ import * as THREE from "./three/three.module.js";
 
 
 
+
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x000011)
 
@@ -26,7 +27,7 @@ scene.add(torus)
 // const gridHelper = new THREE.GridHelper(200,50,0xffffff);
 // scene.add(gridHelper)
 
-const texture = new THREE.TextureLoader().load("../images/ofppt.png")
+const texture = new THREE.TextureLoader().load("../images/ofppt.png");
 const cube = new THREE.Mesh(
   new THREE.BoxGeometry(10,10,10),
   new THREE.MeshBasicMaterial({map:texture})
