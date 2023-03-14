@@ -50,6 +50,10 @@ function animate(){
   // for responsive 
   renderer.setSize(window.innerWidth,window.innerHeight);
 
+  const canvas = renderer.domElement;
+  camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  camera.updateProjectionMatrix();
+
 
 
   renderer.render(scene,camera)

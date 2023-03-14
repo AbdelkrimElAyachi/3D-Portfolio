@@ -36,3 +36,25 @@ header nav a{
 header nav a:hover{
     text-decoration: underline;
 }
+header i{
+    display: none;
+}
+
+@media screen and (max-width:600px){
+    header nav{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        top: 55px;
+        left: 0;
+        background-color: rgba(0, 0, 0,0.8);
+        width: 100%;
+    }
+    header i{
+        font-size: 32px;
+        display: block;        
+    }
+    header nav a{
+        border-bottom: 2px solid white;
+    }
+}
