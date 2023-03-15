@@ -54,5 +54,33 @@ section li:hover{
     background-color: rgba(113, 238, 107, 0.6);
 }
 
-
+.loader_wrapper{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader_wrapper p{
+    font-size:42px ;
+    font-family: 'Courier New', Courier, monospace;
+    animation: spin 2s infinite linear;
+    color: rgb(255, 255, 255);
+} 
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+        font-size: 24px;
+    }
+    100%{
+        transform: rotate(360deg);
+        font-size: 42px;
+    }
+    
+}
 
