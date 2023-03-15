@@ -24,7 +24,7 @@ setInterval(() => {
         document.body.style.visibility = "visible";
         document.querySelector(".loader_wrapper").style.visibility = "hidden";
     }
-}, 2000);
+}, 3000);
 
 
 
