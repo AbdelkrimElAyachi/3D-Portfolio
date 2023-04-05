@@ -1,5 +1,7 @@
 
 import * as THREE from "./three/three.module.js";
+import {CUBE} from "./cube.js";
+import {addStar} from "./cube.js";
 
 
 
@@ -18,34 +20,30 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 
 
-const geoemetry = new THREE.TorusGeometry(10,3,16,100);
-const material = new THREE.MeshBasicMaterial({color:0x00ffaa,wireframe:true});
-const torus = new THREE.Mesh(geoemetry,material)
-torus.position.set(20,-5,0)
-scene.add(torus)
 
-// const gridHelper = new THREE.GridHelper(200,50,0xffffff);
-// scene.add(gridHelper)
+let my_cube = new CUBE(scene);
+my_cube.Create();
+my_cube.Display(0,10,0);
 
-const texture = new THREE.TextureLoader().load("../images/ofppt.png");
-const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(10,10,10),
-  new THREE.MeshBasicMaterial({map:texture})
-)
-cube.position.set(20,40,0)
-scene.add(cube)
 
-addStar(200)
+
+
+addStar(200,scene);
+
+const color = 0xFFFFFF;
+const intensity = 1;
+const light = new THREE.DirectionalLight(color, intensity);
+light.position.set(0, -10, 10);
+scene.add(light);
 
 function animate(){
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.01;
-  torus.rotation.z += 0.01;
 
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-  cube.rotation.z += 0.01;
-
+  if(my_cube.Top()){
+    my_cube.cube.rotation.x += 0.01;
+  }
+  if(my_cube.Bottom()){
+    my_cube.cube.rotation.x -= 0.01;
+  }
 
   // for responsive 
   renderer.setSize(window.innerWidth,window.innerHeight);
@@ -62,29 +60,24 @@ function animate(){
 animate();
 
 
-function addStar(number){
-  for(let i=0;i<number;i++){
-    const geoemetry = new THREE.SphereGeometry(0.25,24,24);
-    const material = new THREE.MeshBasicMaterial({color:0xffffff});
-    const star = new THREE.Mesh(geoemetry,material);
-  
-    scene.add(star);
-    star.position.set(randomNumber(-100,100),randomNumber(-100,100),randomNumber(-100,100));
-  }
 
-
-}
 // for responsive size of the scene
 
 
-function randomNumber(min,max){
-  return Math.floor(Math.random()*(max-min)+min)
-}
 
 document.body.onscroll = moveCamera;
 
 function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
-  camera.position.y = t * -0.05;
+  camera.position.y = t * - 0.05;
   console.log(t);
 }
+
+document.getElementById("top").addEventListener("click",() =>{
+  my_cube.restart();
+});
+document.getElementById("bottom").addEventListener("click",() =>{
+  my_cube.restart();
+});
+
+

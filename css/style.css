@@ -1,86 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #ffffff;
+.slider{
+    position:relative;
+    background-color: rgba(255,0,0,0);
+    top:50%;
+    left:50%;
+    width:100%;
+    margin : 20vh 0 0 -50%;
+    height:60vh;
 }
-canvas{
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-main{
-    position: absolute;
-    width: 100%;
-}
-
-section{
-    margin-top: 200px;
-    max-width: 700px;
-    min-width: 360px;
-    width: 60%;
-    padding: 10px;
-}
-section div{
-    padding: 20px;
-    margin-bottom: 300PX;
-}
-section div h2{
-    margin: 10px;
-    padding: 10px;
-    font-size: 32px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: var(--limouni);
-}
-section div *{
-    padding: 10px;
-    margin: 10px;
-    font-size: 22px;
-    letter-spacing: 1px;
-    word-spacing: 5px;
-}
-section div nav{
-    background-color: rgba(72, 72, 72, 0.5);
+button{
+    padding: 1rem 2rem;
+    background-color: var(--limouni);
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
     border-radius: 10px;
 }
-section div nav ul{
-    list-style: none;
-}
-section a:hover{
-    text-decoration: none;
-}
-section li:hover{
-    border-radius: 5px;
-    background-color: rgba(113, 238, 107, 0.6);
-}
-
-.loader_wrapper{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.loader_wrapper p{
-    font-size:42px ;
-    font-family: 'Courier New', Courier, monospace;
-    animation: spin 2s infinite linear;
-    color: rgb(255, 255, 255);
-} 
-@keyframes spin {
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(180deg);
-        font-size: 24px;
-    }
-    100%{
-        transform: rotate(360deg);
-        font-size: 42px;
-    }
-    
-}
-

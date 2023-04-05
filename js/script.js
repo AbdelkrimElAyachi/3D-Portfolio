@@ -1,3 +1,4 @@
+let infos = []
 
 function show_menu(){
     let menu = document.querySelector("header nav");
@@ -13,7 +14,6 @@ function show_menu(){
 }
 
 setInterval(() => {
-    console.log(document.readyState)
     if(document.readyState !== "complete"){
         document.body.style.visibility = "hidden";
         document.querySelector(".loader_wrapper").style.visibility = "visible";
@@ -24,7 +24,7 @@ setInterval(() => {
         document.body.style.visibility = "visible";
         document.querySelector(".loader_wrapper").style.visibility = "hidden";
     }
-}, 3000);
+}, 1000);
 
 
 

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO : Abdelkrim El Ayachi</title>
-    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- for the favicon icon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Include in icons bootstrap HTML -->
@@ -17,47 +18,34 @@
 
 
     <canvas id="bg_3d"></canvas>
-
+    <header>
+        <h1>ABDELKRIM <span>DEV</span></h1>
+        <nav>
+            <a href="">Home</a>
+            <a href="">Projects</a>
+            <a href="">Videos</a>    
+        </nav>
+        <i onclick="show_menu()" class="bi bi-list"></i>
+    </header>   
     <main>
-        <header>
-            <h1>ABDELKRIM <span>DEV</span></h1>
-            <nav>
-                <a href="">Home</a>
-                <a href="">Projects</a>
-                <a href="">Videos</a>
-    
-    
-            </nav>
-            <i onclick="show_menu()" class="bi bi-list"></i>
-        </header>   
-        <section>
-            <div>
-                <h2>who am i?</h2>
-                <p>Hey Welcome to my first 3d PORTFOLIO i'am abdelkrim el ayachi i live in casablanca in morocco a junior web developper i don't have so many projects 
-                    and experience but i am fast learning person and adapted who has a great sense of responsibility to work and time i don't charge too much since i'm 
-                    not a senior but i can say with a confidence that you will not regret work with me. <br>
-                    Please contact me before with the information of the work 
-                </p>
-            </div>
-            <div>
-                <h2>My work</h2>
-                <nav>
-                    <ul>
-                        <li><a target="_blank" href="https://abdelkrimelayachi.github.io/beginner_reviews/">Reviews</a></li>
-                        <li><a href="">Jeu du pendu</a></li>
-                        <li><a href="">Others</a></li>
-                    </ul>
-                </nav>
-            </div> 
-        </section>
+
+
+        <section class="slider">
+            <button id="top">Top</button>
+            <button id="bottom">Bottom</button>
+
+        </section>    
+
         <footer style="text-align: center;">
             <nav>
                 <a href="">Home</a>
                 <a href="">Projects</a>
                 <a href="">Videos</a>    
             </nav>
-        </footer>
-    </main>         
+        </footer> 
+        </main>
+
+
 
     <div class="loader_wrapper">
         <p>Portfolio abdelkrim</p>
@@ -65,29 +53,6 @@
 
 
 
-
-    <!-- <div class="parent" style="position: relative; display: inline-block;width: 100%;">
-        <div id="bg_3d"></div>
-        <div style="position: absolute; left: 1em; top: 1em;width: 100%;">
-            <header>
-                <h1>ABDELKRIM <span>DEV</span></h1>
-                <nav>
-                    <a href="">Home</a>
-                    <a href="">Projects</a>
-                    <a href="">Videos</a>
-
-
-                </nav>
-            </header>            
-
-
-        </div>
-    </div> -->
-
-
-
-
-    <!-- <canvas id="c"></canvas> -->
 
 
 
