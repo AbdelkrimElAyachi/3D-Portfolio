@@ -1,46 +1,5 @@
-.slider{
-    position:relative;
-    background-color: rgba(255,0,0,0);
-    top:50%;
-    left:50%;
-    width:100%;
-    margin : 20vh 0 0 -50%;
-    height:60vh;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-button{
-    padding: 1rem 2rem;
-    background-color: var(--limouni);
-    color: black;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    border-radius: 10px;
-}
-
-.cube {
-    font-size: 4em;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left:-30vh;
-    transform-style: preserve-3d;
-    transform: rotateX(0deg) rotateY(0deg);
-    color:white;
-    transition:1s;
-}
-.side {
-    position: absolute;
-    width: 60vh;
-    height: 60vh;
-    background: rgba(100,100,100,0.5);
-    border: 1px solid red;
-    text-align: center;
-    line-height: 60vh;
-}
-.front {transform: translateZ(30vh);}
-.top {transform: rotateX(90deg) translateZ(30vh);}
-.right {transform: rotateY(90deg) translateZ(30vh);}
-.left {transform: rotateY(-90deg) translateZ(30vh);}
-.bottom {transform: rotateX(-90deg) translateZ(30vh);}
-.back {transform: rotateY(-180deg) translateZ(30vh);}
-  
